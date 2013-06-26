@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FSharp.NLP.Stanford.Parser</id>
+    <version>0.0.1</version>
+    <authors>@authors@</authors>
+    <owners>Sergey Tihon</owners>
+    <licenseUrl>https://github.com/sergey-tihon/FSharp.NLP.Stanford/blob/master/license.txt</licenseUrl>
+	<iconUrl>https://github.com/sergey-tihon/FSharp.NLP.Stanford/blob/master/nlp-logo.jpg</iconUrl>
+    <projectUrl>https://github.com/sergey-tihon/FSharp.NLP.Stanford</projectUrl>
+    <description>@description@</description>
+    <tags>f# fsharp nlp stanford parser ikvm ikvm.net</tags>
+    <dependencies>
+      <dependency id="IKVM" version="7.3.4830.0" />
+    </dependencies>
+  </metadata>
+</package>
