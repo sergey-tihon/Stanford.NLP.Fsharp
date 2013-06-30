@@ -262,16 +262,28 @@ type PennTreebankIITags =
     /// <para> This category includes which, as well as that when it is used as a relative pronoun. </para>
     /// </summary>
     | WDT 
-    /// Wh-adjective Phrase. Adjectival phrase containing a wh-adverb, as in 'how hot'.
+    /// <summary>
+    /// Wh-adjective Phrase. 
+    /// <para> Adjectival phrase containing a wh-adverb, as in 'how hot'. </para>
+    /// </summary>
     | WHADJP 
-    /// Wh-adverb Phrase. Introduces a clause with an NP gap. May be null (containing the 0 complementizer) or lexical, 
-    /// containing a wh-adverb such as 'how' or 'why'.
+    /// <summary>
+    /// Wh-adverb Phrase. 
+    /// <para> Introduces a clause with an NP gap. May be null (containing the 0 complementizer) or lexical, 
+    /// containing a wh-adverb such as 'how' or 'why'. </para>
+    /// </summary>
     | WHADVP 
-    /// Wh-noun Phrase. Introduces a clause with an NP gap. May be null (containing the 0 complementizer) or lexical, 
-    /// containing some wh-word, e.g. 'who', 'which book', 'whose daughter', 'none of which', or 'how many leopards'.
+    /// <summary>
+    /// Wh-noun Phrase. 
+    /// <para> Introduces a clause with an NP gap. May be null (containing the 0 complementizer) or lexical, 
+    /// containing some wh-word, e.g. 'who', 'which book', 'whose daughter', 'none of which', or 'how many leopards'. </para>
+    /// </summary>
     | WHNP 
-    /// Wh-prepositional Phrase. Prepositional phrase containing a wh-noun phrase (such as 'of which' or 'by whose authority') 
-    /// that either introduces a PP gap or is contained by a WHNP.
+    /// <summary>
+    /// Wh-prepositional Phrase. 
+    /// <para>Prepositional phrase containing a wh-noun phrase (such as 'of which' or 'by whose authority') 
+    /// that either introduces a PP gap or is contained by a WHNP.</para>
+    /// </summary>
     | WHPP 
     /// <summary>
     /// Wh-pronoun
@@ -308,5 +320,5 @@ type PennTreebankIITags =
     /// End quote
     | EQT
 
-    /// One of special symbol like: '#'
+    /// One of special symbols like: '#'
     | Symbol of char

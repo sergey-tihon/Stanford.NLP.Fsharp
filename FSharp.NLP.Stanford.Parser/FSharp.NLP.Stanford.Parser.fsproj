@@ -41,12 +41,15 @@
     <Compile Include="..\AssemblyInfo.fs">
       <Link>AssemblyInfo.fs</Link>
     </Compile>
-    <Compile Include="JCollections.fs" />
+    <Compile Include="Iterable.fs" />
     <Compile Include="PennTreebankIITags.fs" />
     <Compile Include="PennTreebankIIPatterns.fs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="ejml-0.19-nogui">
+      <HintPath>..\build\libs\ejml-0.19-nogui.dll</HintPath>
+    </Reference>
     <Reference Include="IKVM.AWT.WinForms, Version=7.3.4830.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58">
       <Private>True</Private>
     </Reference>
