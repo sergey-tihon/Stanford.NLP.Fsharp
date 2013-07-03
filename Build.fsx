@@ -66,6 +66,7 @@ Target "CreateNuGet" (fun _ ->
                 Description = projectDescription
                 NoPackageAnalysis = true
                 ToolPath = ".\.nuget\NuGet.exe"
+                WorkingDir = nugetDir
                 OutputPath = nugetDir })
 )
 
