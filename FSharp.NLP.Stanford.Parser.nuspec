@@ -12,6 +12,7 @@
     <tags>f# fsharp nlp stanford parser ikvm ikvm.net</tags>
     <dependencies>
       <dependency id="IKVM" version="7.3.4830.0" />
+      <dependency id="Stanford.NLP.Parser" version="3.2.0.0" />
     </dependencies>
   </metadata>
 </package>

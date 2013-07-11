@@ -5,7 +5,7 @@ open Fake.AssemblyInfoFile
 
 // Assembly / NuGet package properties
 let projectName = "FSharp.NLP.Stanford.Parser"
-let version = "0.0.2"
+let version = "0.0.3"
 let projectDescription = "F# wrapper for The Stanford Parser"
 let authors = ["Sergey Tihon"]
 
@@ -52,8 +52,6 @@ Target "CreateNuGet" (fun _ ->
     XCopy buildDir (nugetDir @@ "lib")
     !+ @"build/nuget/lib/*.*"
         -- @"build/nuget/lib/FSharp.NLP*.*"
-        -- @"build/nuget/lib/stanford*.*"
-        -- @"build/nuget/lib/ejml*.*"
         |> ScanImmediately
         |> Seq.iter (System.IO.File.Delete)
         
