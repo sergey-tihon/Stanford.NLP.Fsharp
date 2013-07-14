@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StanfordNER.Csharp.Samples"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StanfordNER.FSharp.Samples", "StanfordNER.FSharp.Samples\StanfordNER.FSharp.Samples.fsproj", "{512A3A8A-2FE2-4861-B18A-ED44155978C6}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StanfordPOSTagger.Fsharp.Samples", "StanfordPOSTagger.Fsharp.Samples\StanfordPOSTagger.Fsharp.Samples.fsproj", "{89FD1AE4-8134-419B-93A1-4B49BDC5D68E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StanfordPOSTagger.Csharp.Samples", "StanfordPOSTagger.Csharp.Samples\StanfordPOSTagger.Csharp.Samples.csproj", "{9D69F728-FE1E-4F86-A24B-11439C0ABC80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{512A3A8A-2FE2-4861-B18A-ED44155978C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{512A3A8A-2FE2-4861-B18A-ED44155978C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{512A3A8A-2FE2-4861-B18A-ED44155978C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FD1AE4-8134-419B-93A1-4B49BDC5D68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FD1AE4-8134-419B-93A1-4B49BDC5D68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FD1AE4-8134-419B-93A1-4B49BDC5D68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FD1AE4-8134-419B-93A1-4B49BDC5D68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D69F728-FE1E-4F86-A24B-11439C0ABC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D69F728-FE1E-4F86-A24B-11439C0ABC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D69F728-FE1E-4F86-A24B-11439C0ABC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D69F728-FE1E-4F86-A24B-11439C0ABC80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
