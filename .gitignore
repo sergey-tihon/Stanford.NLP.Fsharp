@@ -1,3 +1,6 @@
+StanfordSoftware/Download/
+StanfordSoftware/packages/
+StanfordSoftware/temp/
 build/ikvm-7.3.4830.0/
 build/FAKE/
 packages/
