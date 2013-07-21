@@ -13,8 +13,18 @@ How to use it
 
 For other information, check out the pages on the [wiki](https://github.com/sergey-tihon/FSharp.NLP.Stanford/wiki) and following posts:
 
+- [FSharp.NLP.Stanford.Parser justification or StackOverflow questions understanding.](http://sergeytihon.wordpress.com/2013/07/21/fsharp-nlp-stanford-parser-justification-or-stackoverflow-questions-understanding/)
 - [FSharp.NLP.Stanford.Parser available on NuGet](http://sergeytihon.wordpress.com/2013/06/26/fsharp-nlp-stanford-parser-available-on-nuget/)  
+- [Stanford Parser is available on NuGet for F# and C#](http://sergeytihon.wordpress.com/2013/07/11/stanford-parser-is-available-on-nuget/)
 - [NLP: Stanford Parser with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/05/nlp-stanford-parser-with-f-net/)
+
+Related posts:
+
+- [Stanford Log-linear Part-Of-Speech Tagger is available on NuGet](http://sergeytihon.wordpress.com/2013/07/14/stanford-log-linear-part-of-speech-tagger-is-available-on-nuget/)
+- [Stanford Named Entity Recognizer (NER) is available on NuGet](http://sergeytihon.wordpress.com/2013/07/12/stanford-named-entity-recognizer-ner-is-available-on-nuget/)
+- [NLP: Stanford Named Entity Recognizer with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/16/nlp-stanford-named-entity-recognizer-with-f-net/)
+- [NLP: Stanford POS Tagger with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/08/nlp-stanford-pos-tagger-with-f-net/)
+
 
 License
 =======
