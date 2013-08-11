@@ -1,7 +1,7 @@
 FSharp.NLP.Stanford
 ===================
 
-F# wrappers for [The Stanford NLP Software](http://nlp.stanford.edu/software/index.shtml)
+F# wrappers for [The Stanford NLP Software](http://nlp.stanford.edu/software/index.shtml) is available on [NuGet](https://www.nuget.org/packages/FSharp.NLP.Stanford.Parser/).
 
 How to use it
 =============
@@ -25,6 +25,18 @@ Related posts:
 - [NLP: Stanford Named Entity Recognizer with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/16/nlp-stanford-named-entity-recognizer-with-f-net/)
 - [NLP: Stanford POS Tagger with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/08/nlp-stanford-pos-tagger-with-f-net/)
 
+NuGet
+=============
+
+F# wrappers for Stanford Software:
+
+- [FSharp.NLP.Stanford.Parser](https://www.nuget.org/packages/FSharp.NLP.Stanford.Parser/)
+
+Stanford Software:
+
+- [Stanford.NLP.Parser](https://www.nuget.org/packages/Stanford.NLP.Parser/)
+- [Stanford.NLP.POSTagger](https://www.nuget.org/packages/Stanford.NLP.POSTagger/)
+- [Stanford.NLP.NER](https://www.nuget.org/packages/Stanford.NLP.NER/)
 
 License
 =======
