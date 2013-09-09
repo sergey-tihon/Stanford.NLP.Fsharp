@@ -14,7 +14,7 @@ How to use it
 For other information, check out the pages on the [wiki](https://github.com/sergey-tihon/FSharp.NLP.Stanford/wiki) and following posts:
 
 - [FSharp.NLP.Stanford.Parser justification or StackOverflow questions understanding.](http://sergeytihon.wordpress.com/2013/07/21/fsharp-nlp-stanford-parser-justification-or-stackoverflow-questions-understanding/)
-- [FSharp.NLP.Stanford.Parser available on NuGet](http://sergeytihon.wordpress.com/2013/06/26/fsharp-nlp-stanford-parser-available-on-nuget/)  
+- [FSharp.NLP.Stanford.Parser is available on NuGet](http://sergeytihon.wordpress.com/2013/06/26/fsharp-nlp-stanford-parser-available-on-nuget/)  
 - [Stanford Parser is available on NuGet for F# and C#](http://sergeytihon.wordpress.com/2013/07/11/stanford-parser-is-available-on-nuget/)
 - [NLP: Stanford Parser with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/05/nlp-stanford-parser-with-f-net/)
 
@@ -24,6 +24,7 @@ Related posts:
 - [Stanford Named Entity Recognizer (NER) is available on NuGet](http://sergeytihon.wordpress.com/2013/07/12/stanford-named-entity-recognizer-ner-is-available-on-nuget/)
 - [NLP: Stanford Named Entity Recognizer with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/16/nlp-stanford-named-entity-recognizer-with-f-net/)
 - [NLP: Stanford POS Tagger with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/08/nlp-stanford-pos-tagger-with-f-net/)
+- [Stanford Word Segmenter is available on NuGet](http://sergeytihon.wordpress.com/2013/09/09/stanford-word-segmenter-is-available-on-nuget/)
 
 NuGet
 =============
@@ -37,6 +38,7 @@ Stanford Software:
 - [Stanford.NLP.Parser](https://www.nuget.org/packages/Stanford.NLP.Parser/)
 - [Stanford.NLP.POSTagger](https://www.nuget.org/packages/Stanford.NLP.POSTagger/)
 - [Stanford.NLP.NER](https://www.nuget.org/packages/Stanford.NLP.NER/)
+- [Stanford.NLP.Segmenter](https://www.nuget.org/packages/Stanford.NLP.Segmenter/3.2.0.0)
 
 License
 =======
