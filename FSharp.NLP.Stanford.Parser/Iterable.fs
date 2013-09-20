@@ -1,4 +1,4 @@
-﻿namespace FSharp.IKVM.Util
+﻿namespace java.util
 
 open java.lang
 open java.util

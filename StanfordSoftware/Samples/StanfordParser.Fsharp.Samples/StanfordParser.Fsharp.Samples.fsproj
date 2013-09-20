@@ -154,7 +154,9 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="java.util.fs" />
+    <Compile Include="..\..\..\FSharp.NLP.Stanford.Parser\Iterable.fs">
+      <Link>Iterable.fs</Link>
+    </Compile>
     <Compile Include="ParserDemo.fs" />
     <Compile Include="ParserDemo2.fs" />
     <Compile Include="Program.fs" />

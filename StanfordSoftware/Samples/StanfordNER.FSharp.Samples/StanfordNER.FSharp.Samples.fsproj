@@ -45,7 +45,9 @@
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>
-    <Compile Include="java.util.fs" />
+    <Compile Include="..\..\..\FSharp.NLP.Stanford.Parser\Iterable.fs">
+      <Link>Iterable.fs</Link>
+    </Compile>
     <Compile Include="NERDemo.fs" />
     <Compile Include="Program.fs" />
     <Content Include="sample.txt">
