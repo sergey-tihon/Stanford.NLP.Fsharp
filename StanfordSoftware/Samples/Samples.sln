@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StanfordSegmenter.Csharp.Sa
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StanfordSegmenter.Fsharp.Samples", "StanfordSegmenter.Fsharp.Samples\StanfordSegmenter.Fsharp.Samples.fsproj", "{FFFF8D9B-2618-41FF-BC2B-5A7887E81204}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StanfordCoreNLP.FSharp.Samples", "StanfordCoreNLP.FSharp.Samples\StanfordCoreNLP.FSharp.Samples.fsproj", "{2E4C5A8B-E3AD-4B94-95A4-F443E1993F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StanfordCoreNLP.CSharp.Samples", "StanfordCoreNLP.CSharp.Samples\StanfordCoreNLP.CSharp.Samples.csproj", "{D45FC423-AFCE-41BC-8CC0-CB7722ABF67B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +66,14 @@ Global
 		{FFFF8D9B-2618-41FF-BC2B-5A7887E81204}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFFF8D9B-2618-41FF-BC2B-5A7887E81204}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFFF8D9B-2618-41FF-BC2B-5A7887E81204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E4C5A8B-E3AD-4B94-95A4-F443E1993F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4C5A8B-E3AD-4B94-95A4-F443E1993F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4C5A8B-E3AD-4B94-95A4-F443E1993F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4C5A8B-E3AD-4B94-95A4-F443E1993F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45FC423-AFCE-41BC-8CC0-CB7722ABF67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45FC423-AFCE-41BC-8CC0-CB7722ABF67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45FC423-AFCE-41BC-8CC0-CB7722ABF67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45FC423-AFCE-41BC-8CC0-CB7722ABF67B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

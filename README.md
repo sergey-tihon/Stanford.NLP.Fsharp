@@ -20,6 +20,7 @@ For other information, check out the pages on the [wiki](https://github.com/serg
 
 Related posts:
 
+- [Stanford CoreNLP is available on NuGet for F#/C# devs](http://sergeytihon.wordpress.com/2013/10/26/stanford-corenlp-is-available-on-nuget-for-fc-devs/)
 - [Stanford Log-linear Part-Of-Speech Tagger is available on NuGet](http://sergeytihon.wordpress.com/2013/07/14/stanford-log-linear-part-of-speech-tagger-is-available-on-nuget/)
 - [Stanford Named Entity Recognizer (NER) is available on NuGet](http://sergeytihon.wordpress.com/2013/07/12/stanford-named-entity-recognizer-ner-is-available-on-nuget/)
 - [NLP: Stanford Named Entity Recognizer with F# (.NET)](http://sergeytihon.wordpress.com/2013/02/16/nlp-stanford-named-entity-recognizer-with-f-net/)
@@ -35,6 +36,7 @@ F# wrappers for Stanford Software:
 
 Stanford Software:
 
+- [Stanford.NLP.CoreNLP](https://www.nuget.org/packages/Stanford.NLP.CoreNLP/)
 - [Stanford.NLP.Parser](https://www.nuget.org/packages/Stanford.NLP.Parser/)
 - [Stanford.NLP.POSTagger](https://www.nuget.org/packages/Stanford.NLP.POSTagger/)
 - [Stanford.NLP.NER](https://www.nuget.org/packages/Stanford.NLP.NER/)
