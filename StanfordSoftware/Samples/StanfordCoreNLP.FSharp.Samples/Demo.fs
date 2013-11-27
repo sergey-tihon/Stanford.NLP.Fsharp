@@ -105,6 +105,7 @@ let [<Test>] ``StanfordCoreNlpDemo.java with manual configuration`` () =
     "dcoref.extra.gender"       <== ! @"dcoref\namegender.combine.txt"
     "dcoref.states.provinces"   <== ! @"dcoref\statesandprovinces"
     "dcoref.singleton.predictor"<== ! @"dcoref\singleton.predictor.ser"
+    "dcoref.big.gender.number"  <== ! @"dcoref\gender.data.gz"
     
     let sutimeRules = 
         [| ! @"sutime\defs.sutime.txt";

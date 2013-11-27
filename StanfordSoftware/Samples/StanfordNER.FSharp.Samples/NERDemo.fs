@@ -11,7 +11,7 @@ open System.IO
 let main file =
     let classifier = 
         CRFClassifier.getClassifierNoExceptions(
-            @"..\..\..\..\temp\stanford-ner-2013-06-20\classifiers\english.all.3class.distsim.crf.ser.gz")
+            @"..\..\..\..\temp\stanford-ner-2013-11-12\classifiers\english.all.3class.distsim.crf.ser.gz")
     // For either a file to annotate or for the hardcoded text example,
     // this demo file shows two ways to process the output, for teaching
     // purposes.  For the file, it shows both how to run NER on a String

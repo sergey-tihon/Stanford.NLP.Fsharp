@@ -1,4 +1,4 @@
 @echo off
 cls
-"..\.nuget\nuget.exe" "install" "FAKE" "-Pre" "-OutputDirectory" "..\build" "-ExcludeVersion"
+"..\.nuget\nuget.exe" "install" "FAKE" "-OutputDirectory" "..\build" "-ExcludeVersion"
 pause

@@ -13,9 +13,9 @@ let projectDescription = "A Part-Of-Speech Tagger (POS Tagger) is a piece of sof
 // Run IKVM compiler
 Target "RunIKVMCompiler" (fun _ ->
     restoreFolderFromUrl 
-        @".\temp\stanford-postagger-2013-06-20" 
-        "http://nlp.stanford.edu/software/stanford-postagger-2013-06-20.zip"
-    [IKVMcTask(@"temp\stanford-postagger-2013-06-20\stanford-postagger.jar", Version=version)]
+        @".\temp\stanford-postagger-full-2013-11-12" 
+        "http://nlp.stanford.edu/software/stanford-postagger-full-2013-11-12.zip"
+    [IKVMcTask(@"temp\stanford-postagger-full-2013-11-12\stanford-postagger.jar", Version=version)]
     |> IKVMCompile ikvmDir @".\Stanford.NLP.snk"
 )
 

@@ -15,7 +15,7 @@ namespace StanfordPOSTagger.Csharp.Samples
     public static class TaggerDemo
     {
         public const string Model =
-            @"..\..\..\..\temp\stanford-postagger-2013-06-20\models\wsj-0-18-bidirectional-nodistsim.tagger";
+            @"..\..\..\..\temp\stanford-postagger-full-2013-11-12\models\wsj-0-18-bidirectional-nodistsim.tagger";
 
         private static void TagReader(Reader reader)
         {

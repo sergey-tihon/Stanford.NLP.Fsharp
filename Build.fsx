@@ -5,7 +5,7 @@ open Fake.AssemblyInfoFile
 
 // Assembly / NuGet package properties
 let projectName = "FSharp.NLP.Stanford.Parser"
-let version = "0.0.4"
+let version = "0.0.5"
 let projectDescription = "F# wrapper for The Stanford Parser"
 let authors = ["Sergey Tihon"]
 

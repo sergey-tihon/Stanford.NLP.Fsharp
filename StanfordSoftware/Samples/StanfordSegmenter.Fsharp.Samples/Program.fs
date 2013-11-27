@@ -18,16 +18,16 @@ let main argv =
         printf "usage: StanfordSegmenter.Csharp.Samples.exe filename"
     else
         let props = Properties();
-        props.setProperty("sighanCorporaDict", @"..\..\..\..\temp\stanford-segmenter-2013-06-20\data") |> ignore
+        props.setProperty("sighanCorporaDict", @"..\..\..\..\temp\stanford-segmenter-2013-11-12\data") |> ignore
         // props.setProperty("NormalizationTable", @"..\..\..\..\temp\stanford-segmenter-2013-06-20\data\norm.simp.utf8") |> ignore
         // props.setProperty("normTableEncoding", "UTF-8") |> ignore
         // below is needed because CTBSegDocumentIteratorFactory accesses it
-        props.setProperty("serDictionary", @"..\..\..\..\temp\stanford-segmenter-2013-06-20\data\dict-chris6.ser.gz") |> ignore
+        props.setProperty("serDictionary", @"..\..\..\..\temp\stanford-segmenter-2013-11-12\data\dict-chris6.ser.gz") |> ignore
         props.setProperty("testFile", argv.[0]) |> ignore
         props.setProperty("inputEncoding", "UTF-8") |> ignore
         props.setProperty("sighanPostProcessing", "true") |> ignore
 
         let segmenter = CRFClassifier(props)
-        segmenter.loadClassifierNoExceptions(@"..\..\..\..\temp\stanford-segmenter-2013-06-20\data\ctb.gz", props)
+        segmenter.loadClassifierNoExceptions(@"..\..\..\..\temp\stanford-segmenter-2013-11-12\data\ctb.gz", props)
         segmenter.classifyAndWriteAnswers(argv.[0])
     0

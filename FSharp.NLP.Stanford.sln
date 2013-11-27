@@ -1,14 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.NLP.Stanford.Parser", "FSharp.NLP.Stanford.Parser\FSharp.NLP.Stanford.Parser.fsproj", "{DA4894DE-F07D-4522-939C-7BD01A282DCF}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D9FD50B-DA4B-45D0-9CB1-CBB5A809FA46}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.NLP.Stanford.Parser", "FSharp.NLP.Stanford.Parser\FSharp.NLP.Stanford.Parser.fsproj", "{DA4894DE-F07D-4522-939C-7BD01A282DCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

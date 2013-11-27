@@ -8,7 +8,7 @@ namespace StanfordParser.Csharp.Samples
 {
     class Program
     {
-        public static string ParserModel = @"..\..\..\..\temp\stanford-parser-full-2013-06-20\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz";
+        public static string ParserModel = @"..\..\..\..\temp\stanford-parser-full-2013-11-12\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz";
 
         static void Main(string[] args)
         {

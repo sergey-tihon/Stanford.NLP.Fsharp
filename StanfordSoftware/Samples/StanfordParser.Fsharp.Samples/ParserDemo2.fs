@@ -13,7 +13,7 @@ let main (model:string option) (fileName:string option) =
     let grammar = 
         match model with
         | Some(model) -> model
-        | None -> @"..\..\..\..\temp\stanford-parser-full-2013-06-20\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz"
+        | None -> @"..\..\..\..\temp\stanford-parser-full-2013-11-12\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz"
     let options =[|"-maxLength"; "80"; "-retainTmpSubcategories"|]
     let lp = LexicalizedParser.loadModel(grammar, options);
     let tlp = PennTreebankLanguagePack();

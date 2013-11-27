@@ -34,8 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ejml-0.19-nogui">
-      <HintPath>..\packages\Stanford.NLP.Parser.3.2.0.0\lib\ejml-0.19-nogui.dll</HintPath>
+    <Reference Include="ejml-0.23">
+      <HintPath>..\packages\Stanford.NLP.Parser.3.3.0.0\lib\ejml-0.23.dll</HintPath>
     </Reference>
     <Reference Include="IKVM.AWT.WinForms, Version=7.3.4830.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -127,8 +127,12 @@
     <Reference Include="IKVM.Runtime.JNI">
       <HintPath>..\packages\IKVM.7.3.4830.0\lib\IKVM.Runtime.JNI.dll</HintPath>
     </Reference>
-    <Reference Include="stanford-parser">
-      <HintPath>..\packages\Stanford.NLP.Parser.3.2.0.0\lib\stanford-parser.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="stanford-parser, Version=3.3.0.0, Culture=neutral, PublicKeyToken=f2aa5350432048ad, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Stanford.NLP.Parser.3.3.0.0\lib\stanford-parser.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

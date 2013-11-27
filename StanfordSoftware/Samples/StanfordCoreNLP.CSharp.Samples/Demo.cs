@@ -116,6 +116,7 @@ namespace StanfordCoreNLP.CSharp.Samples
             props.setProperty("dcoref.extra.gender", Config.GetModel(@"dcoref\namegender.combine.txt"));
             props.setProperty("dcoref.states.provinces", Config.GetModel(@"dcoref\statesandprovinces"));
             props.setProperty("dcoref.singleton.predictor", Config.GetModel(@"dcoref\singleton.predictor.ser"));
+            props.setProperty("dcoref.big.gender.number", Config.GetModel(@"dcoref\gender.data.gz"));
 
             var sutimeRules = new[] {
                                       Config.GetModel(@"sutime\defs.sutime.txt"),

@@ -52,7 +52,7 @@ let demoAPI (lp:LexicalizedParser) =
     tp.printTree(parse)
 
 let main fileName =
-    let lp = LexicalizedParser.loadModel(@"..\..\..\..\temp\stanford-parser-full-2013-06-20\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz")
+    let lp = LexicalizedParser.loadModel(@"..\..\..\..\temp\stanford-parser-full-2013-11-12\edu\stanford\nlp\models\lexparser\englishPCFG.ser.gz")
     match fileName with
     | Some(file) -> demoDP lp file
     | None -> demoAPI lp
