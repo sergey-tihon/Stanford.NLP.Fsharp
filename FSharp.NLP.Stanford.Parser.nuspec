@@ -11,8 +11,8 @@
     <description>@description@</description>
     <tags>f# fsharp nlp stanford parser ikvm ikvm.net</tags>
     <dependencies>
-      <dependency id="IKVM" version="7.3.4830.0" />
-      <dependency id="Stanford.NLP.Parser" version="3.3.0.0" />
+      <dependency id="IKVM" version="[7.4.5196]" />
+      <dependency id="Stanford.NLP.Parser" version="[3.3.1.1]" />
     </dependencies>
   </metadata>
 </package>
