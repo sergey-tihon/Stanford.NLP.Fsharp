@@ -6,7 +6,7 @@
     <authors>@authors@</authors>
     <owners>Sergey Tihon</owners>
     <licenseUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/LICENSE.txt</licenseUrl>
-	<iconUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/nlp-logo.jpg?raw=true</iconUrl>
+    <iconUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/docs/files/img/logo.jpg?raw=true</iconUrl>
     <projectUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp</projectUrl>
     <description>@description@</description>
     <tags>f# fsharp nlp stanford parser ikvm ikvm.net</tags>

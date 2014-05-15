@@ -15,8 +15,26 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{82F059BE-F2E1-4EF3-A8D3-B3A6DB96FE4D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BA764E41-2299-48A8-9542-6D9526DF5F07}"
+	ProjectSection(SolutionItems) = preProject
+		Build.fsx = Build.fsx
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
+		nuget\Stanford.NLP.Parser.Fsharp.nuspec = nuget\Stanford.NLP.Parser.Fsharp.nuspec
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7946EE4C-E81B-475F-8528-3F075F80EB5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{ED2B779C-F360-4288-8A43-46ED443521A7}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\index.fsx = docs\content\index.fsx
+		docs\content\tutorial.fsx = docs\content\tutorial.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{46915363-CAAE-4BA0-9D42-19B4248CD26F}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tools\generate.fsx = docs\tools\generate.fsx
+		docs\tools\templates\template.cshtml = docs\tools\templates\template.cshtml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED2B779C-F360-4288-8A43-46ED443521A7} = {82F059BE-F2E1-4EF3-A8D3-B3A6DB96FE4D}
+		{46915363-CAAE-4BA0-9D42-19B4248CD26F} = {82F059BE-F2E1-4EF3-A8D3-B3A6DB96FE4D}
 	EndGlobalSection
 EndGlobal
