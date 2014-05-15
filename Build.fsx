@@ -1,85 +1,167 @@
-﻿// include Fake lib
-#r @"build\FAKE\tools\FakeLib.dll"
+// --------------------------------------------------------------------------------------
+// FAKE build script 
+// --------------------------------------------------------------------------------------
+
+#r @"packages/FAKE/tools/FakeLib.dll"
 open Fake 
+open Fake.Git
 open Fake.AssemblyInfoFile
+open Fake.ReleaseNotesHelper
+open System
 
-// Assembly / NuGet package properties
-let projectName = "FSharp.NLP.Stanford.Parser"
-let version = "0.0.6"
-let projectDescription = "F# wrapper for The Stanford Parser"
-let authors = ["Sergey Tihon"]
+// --------------------------------------------------------------------------------------
+// START TODO: Provide project-specific details below
+// --------------------------------------------------------------------------------------
 
-// Folders
-let buildDir = @".\build\bin\"
-let nugetDir = @".\build\nuget\"
+// Information about the project are used
+//  - for version and project name in generated AssemblyInfo file
+//  - by the generated NuGet package 
+//  - to run tests and to publish documentation on GitHub gh-pages
+//  - for documentation, you also need to edit info in "docs/tools/generate.fsx"
 
-// Restore NuGet packages
-!! "./**/packages.config"
-    |> Seq.iter (RestorePackage (fun p -> 
-        {p with 
-            ToolPath = "./.nuget/NuGet.exe"}))
+// The name of the project 
+// (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
+let project = "Stanford.NLP.Parser.Fsharp"
 
-// Targets
+// Short summary of the project
+// (used as description in AssemblyInfo and as a short summary for NuGet package)
+let summary = "F# wrapper for Stanford.NLP.Parser"
 
-// Update assembly info
-Target "UpdateAssemblyInfo" (fun _ ->
-    CreateFSharpAssemblyInfo ".\AssemblyInfo.fs"
-        [ Attribute.Product projectName
-          Attribute.Title projectName
-          Attribute.Description projectDescription
-          Attribute.Version version ]
+// Longer description of the project
+// (used as a description for NuGet package; line breaks are automatically cleaned up)
+let description = """
+  F# wrapper for Stanford.NLP.Parser """
+// List of author names (for NuGet package)
+let authors = [ "Sergey Tihon" ]
+// Tags for your project (for NuGet package)
+let tags = "f# fsharp nlp stanford parser ikvm ikvm.net"
+
+// File system information 
+// (<solutionFile>.sln is built during the building process)
+let solutionFile  = "Stanford.NLP.Fsharp"
+// Pattern specifying assemblies to be tested using NUnit
+let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
+
+// Git configuration (used for publishing documentation in gh-pages branch)
+// The profile where the project is posted 
+let gitHome = "https://github.com/sergey-tihon"
+// The name of the project on GitHub
+let gitName = "Stanford.NLP.Fsharp"
+
+// --------------------------------------------------------------------------------------
+// END TODO: The rest of the file includes standard build steps 
+// --------------------------------------------------------------------------------------
+
+// Read additional information from the release notes document
+Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
+let release = parseReleaseNotes (IO.File.ReadAllLines "RELEASE_NOTES.md")
+
+// Generate assembly info files with the right version & up-to-date information
+Target "AssemblyInfo" (fun _ ->
+  let fileName = "src/" + project + "/AssemblyInfo.fs"
+  CreateFSharpAssemblyInfo fileName
+      [ Attribute.Title project
+        Attribute.Product project
+        Attribute.Description summary
+        Attribute.Version release.AssemblyVersion
+        Attribute.FileVersion release.AssemblyVersion ] 
 )
 
-// Clean build directory
+// --------------------------------------------------------------------------------------
+// Clean build results & restore NuGet packages
+
+Target "RestorePackages" RestorePackages
+
 Target "Clean" (fun _ ->
-    CleanDir buildDir
+    CleanDirs ["bin"; "temp"]
 )
 
-// Build FSharp.NLP.Stanford.Parser
-Target "BuildFSharpNLPStanford" (fun _ ->
-    !! @"FSharp.NLP.Stanford.Parser\FSharp.NLP.Stanford.Parser.fsproj"
-      |> MSBuildRelease buildDir "Build"
-      |> Log "AppBuild-Output: "
+Target "CleanDocs" (fun _ ->
+    CleanDirs ["docs/output"]
 )
 
-// Clean NuGet directory
-Target "CleanNuGet" (fun _ ->
-    CleanDir nugetDir
+// --------------------------------------------------------------------------------------
+// Build library & test project
+
+Target "Build" (fun _ ->
+    !! (solutionFile + "*.sln")
+    |> MSBuildRelease "" "Rebuild"
+    |> ignore
 )
 
-// Create NuGet package
-Target "CreateNuGet" (fun _ ->     
-    XCopy buildDir (nugetDir @@ "lib")
-    !+ @"build/nuget/lib/*.*"
-        -- @"build/nuget/lib/FSharp.NLP*.*"
-        |> ScanImmediately
-        |> Seq.iter (System.IO.File.Delete)
-        
-    "FSharp.NLP.Stanford.Parser.nuspec"
-      |> NuGet (fun p -> 
-            {p with
-                Project = projectName
-                Authors = authors
-                Version = version
-                Description = projectDescription
-                NoPackageAnalysis = true
-                ToolPath = ".\.nuget\NuGet.exe"
-                WorkingDir = nugetDir
-                OutputPath = nugetDir })
+// --------------------------------------------------------------------------------------
+// Run the unit tests using test runner
+
+Target "RunTests" (fun _ ->
+    !! testAssemblies 
+    |> NUnit (fun p ->
+        { p with
+            DisableShadowCopy = true
+            TimeOut = TimeSpan.FromMinutes 20.
+            OutputFile = "TestResults.xml" })
 )
 
-// Default target
-Target "Default" (fun _ ->
-    trace "Building FSharp.NLP.Stanford"
+// --------------------------------------------------------------------------------------
+// Build a NuGet package
+
+Target "NuGet" (fun _ ->
+    NuGet (fun p -> 
+        { p with   
+            Authors = authors
+            Project = project
+            Summary = summary
+            Description = description
+            Version = release.NugetVersion
+            ReleaseNotes = String.Join(Environment.NewLine, release.Notes)
+            Tags = tags
+            OutputPath = "bin"
+            AccessKey = getBuildParamOrDefault "nugetkey" ""
+            Publish = hasBuildParam "nugetkey"
+            Dependencies = [] })
+        ("nuget/" + project + ".nuspec")
 )
 
-// Dependencies
-"UpdateAssemblyInfo"
-  ==> "Clean"
-  ==> "BuildFSharpNLPStanford"
-  ==> "CleanNuGet"
-  ==> "CreateNuGet"
-  ==> "Default"
+// --------------------------------------------------------------------------------------
+// Generate the documentation
 
-// start build
-Run "Default"
+Target "GenerateDocs" (fun _ ->
+    executeFSIWithArgs "docs/tools" "generate.fsx" ["--define:RELEASE"] [] |> ignore
+)
+
+// --------------------------------------------------------------------------------------
+// Release Scripts
+
+Target "ReleaseDocs" (fun _ ->
+    let tempDocsDir = "temp/gh-pages"
+    CleanDir tempDocsDir
+    Repository.cloneSingleBranch "" (gitHome + "/" + gitName + ".git") "gh-pages" tempDocsDir
+
+    fullclean tempDocsDir
+    CopyRecursive "docs/output" tempDocsDir true |> tracefn "%A"
+    StageAll tempDocsDir
+    Commit tempDocsDir (sprintf "Update generated documentation for version %s" release.NugetVersion)
+    Branches.push tempDocsDir
+)
+
+Target "Release" DoNothing
+
+// --------------------------------------------------------------------------------------
+// Run all targets by default. Invoke 'build <Target>' to override
+
+Target "All" DoNothing
+
+"Clean"
+  ==> "RestorePackages"
+  ==> "AssemblyInfo"
+  ==> "Build"
+  //==> "RunTests"
+  ==> "All"
+
+"All" 
+  ==> "CleanDocs"
+  ==> "GenerateDocs"
+  ==> "ReleaseDocs"
+  ==> "NuGet"
+  ==> "Release"
+
+RunTargetOrDefault "All"

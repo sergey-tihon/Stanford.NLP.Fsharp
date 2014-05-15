@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module FSharp.NLP.Stanford.Parser.PennTreebankIITags
+module Stanford.NLP.FSharp.Parser.PennTreebankIITags
 
 // http://www.cis.upenn.edu/~treebank/
 type PennTreebankIITags =

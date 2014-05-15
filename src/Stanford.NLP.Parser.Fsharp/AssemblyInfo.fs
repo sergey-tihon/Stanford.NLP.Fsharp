@@ -1,11 +1,12 @@
 ﻿namespace System
 open System.Reflection
 
+[<assembly: AssemblyTitleAttribute("Stanford.NLP.Parser.Fsharp")>]
 [<assembly: AssemblyProductAttribute("Stanford.NLP.Parser.Fsharp")>]
-[<assembly: AssemblyTitleAttribute("Stanford.NLP.Parser.FSharp")>]
-[<assembly: AssemblyDescriptionAttribute("F# wrapper for The Stanford Parser")>]
-[<assembly: AssemblyVersionAttribute("0.0.6")>]
+[<assembly: AssemblyDescriptionAttribute("F# wrapper for Stanford.NLP.Parser")>]
+[<assembly: AssemblyVersionAttribute("0.0.7")>]
+[<assembly: AssemblyFileVersionAttribute("0.0.7")>]
 do ()
 
 module internal AssemblyVersionInformation =
-    let [<Literal>] Version = "0.0.6"
+    let [<Literal>] Version = "0.0.7"

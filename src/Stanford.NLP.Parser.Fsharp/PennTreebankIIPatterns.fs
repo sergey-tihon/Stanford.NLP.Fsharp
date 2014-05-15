@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module FSharp.NLP.Stanford.Parser.PennTreebankIIPatterns
+module Stanford.NLP.FSharp.Parser.PennTreebankIIPatterns
 
 open edu.stanford.nlp.trees
 
