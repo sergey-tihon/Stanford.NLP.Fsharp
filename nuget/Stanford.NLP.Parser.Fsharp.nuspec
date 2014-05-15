@@ -5,9 +5,9 @@
     <version>0.0.1</version>
     <authors>@authors@</authors>
     <owners>Sergey Tihon</owners>
-    <licenseUrl>https://github.com/sergey-tihon/FSharp.NLP.Stanford/blob/master/LICENSE.txt</licenseUrl>
-	<iconUrl>https://github.com/sergey-tihon/FSharp.NLP.Stanford/blob/master/nlp-logo.jpg?raw=true</iconUrl>
-    <projectUrl>https://github.com/sergey-tihon/FSharp.NLP.Stanford</projectUrl>
+    <licenseUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/LICENSE.txt</licenseUrl>
+	<iconUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/nlp-logo.jpg?raw=true</iconUrl>
+    <projectUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp</projectUrl>
     <description>@description@</description>
     <tags>f# fsharp nlp stanford parser ikvm ikvm.net</tags>
     <dependencies>
