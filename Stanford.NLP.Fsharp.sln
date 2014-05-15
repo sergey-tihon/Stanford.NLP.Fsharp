@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D9FD50B-DA4B-45D0-9CB1-CBB5A809FA46}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,7 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D9FD5
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.NLP.Stanford.Parser", "FSharp.NLP.Stanford.Parser\FSharp.NLP.Stanford.Parser.fsproj", "{DA4894DE-F07D-4522-939C-7BD01A282DCF}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Stanford.NLP.Parser.Fsharp", "src\Stanford.NLP.Parser.Fsharp\Stanford.NLP.Parser.Fsharp.fsproj", "{DA4894DE-F07D-4522-939C-7BD01A282DCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{82F059BE-F2E1-4EF3-A8D3-B3A6DB96FE4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BA764E41-2299-48A8-9542-6D9526DF5F07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7946EE4C-E81B-475F-8528-3F075F80EB5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

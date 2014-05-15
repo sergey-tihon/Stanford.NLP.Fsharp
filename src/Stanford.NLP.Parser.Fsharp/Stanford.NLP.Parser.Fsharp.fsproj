@@ -10,7 +10,7 @@
     <RootNamespace>FSharp.NLP.Stanford.Parser</RootNamespace>
     <AssemblyName>FSharp.NLP.Stanford.Parser</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <Name>FSharp.NLP.Stanford.Parser</Name>
+    <Name>Stanford.NLP.Parser.Fsharp</Name>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
@@ -52,9 +52,7 @@
   <Import Project="$(FSharpTargetsPath)" Condition="Exists('$(FSharpTargetsPath)')" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>
-    <Compile Include="..\AssemblyInfo.fs">
-      <Link>AssemblyInfo.fs</Link>
-    </Compile>
+    <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Iterable.fs" />
     <Compile Include="PennTreebankIITags.fs" />
     <Compile Include="PennTreebankIIPatterns.fs" />
