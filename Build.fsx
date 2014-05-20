@@ -25,12 +25,12 @@ let project = "Stanford.NLP.Parser.Fsharp"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
-let summary = "F# extentions for Stanford.NLP.Parser"
+let summary = "F# extensions for Stanford.NLP.Parser"
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
 let description = """
-  F# extentions for Stanford.NLP.Parser """
+  F# extensions for Stanford.NLP.Parser """
 // List of author names (for NuGet package)
 let authors = [ "Sergey Tihon" ]
 // Tags for your project (for NuGet package)
