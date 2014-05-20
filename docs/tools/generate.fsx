@@ -16,7 +16,7 @@ let info =
     "project-author", "Sergey Tihon"
     "project-summary", "F# extentions for The Stanford.NLP.NET"
     "project-github", githubLink
-    "project-nuget", "http://nuget.com/packages/Stanford.NLP.Parser.Fsharp" ]
+    "project-nuget", "https://www.nuget.org/packages/Stanford.NLP.Parser.Fsharp/" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

@@ -7,7 +7,7 @@
     <owners>@authors@</owners>
     <licenseUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/LICENSE.txt</licenseUrl>
     <iconUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp/blob/master/docs/files/img/logo.jpg?raw=true</iconUrl>
-    <projectUrl>https://github.com/sergey-tihon/Stanford.NLP.Fsharp</projectUrl>
+    <projectUrl>http://sergey-tihon.github.io/Stanford.NLP.Fsharp/</projectUrl>
     <summary>@summary@</summary>
     <description>@description@</description>
     <releaseNotes>@releaseNotes@</releaseNotes>
