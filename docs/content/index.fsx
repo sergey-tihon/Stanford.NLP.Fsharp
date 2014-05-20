@@ -4,7 +4,7 @@
 #I "../../bin"
 
 (**
-F# extentions for [Stanford.NLP.NET](http://sergey-tihon.github.io/Stanford.NLP.NET/)
+F# extensions for [Stanford.NLP.NET](http://sergey-tihon.github.io/Stanford.NLP.NET/)
 ====================================
 
 Available packages
