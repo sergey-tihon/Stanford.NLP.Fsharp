@@ -25,12 +25,12 @@ let project = "Stanford.NLP.Parser.Fsharp"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
-let summary = "F# wrapper for Stanford.NLP.Parser"
+let summary = "F# extentions for Stanford.NLP.Parser"
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
 let description = """
-  F# wrapper for Stanford.NLP.Parser """
+  F# extentions for Stanford.NLP.Parser """
 // List of author names (for NuGet package)
 let authors = [ "Sergey Tihon" ]
 // Tags for your project (for NuGet package)
@@ -104,7 +104,20 @@ Target "RunTests" (fun _ ->
 // --------------------------------------------------------------------------------------
 // Build a NuGet package
 
+open System.IO
 Target "NuGet" (fun _ ->
+    let package = "bin\package"
+    let lib = package @@ "lib"
+    if (Directory.Exists package)
+        then Directory.Delete package
+
+    Directory.CreateDirectory package |> ignore
+    Directory.CreateDirectory lib |> ignore
+
+    !! ("bin\\Stanford.NLP.*Fsharp.*")
+    |> Seq.iter (fun x-> 
+        File.Copy(x, Path.Combine(lib, Path.GetFileName(x)), true))
+
     NuGet (fun p -> 
         { p with   
             Authors = authors
@@ -115,6 +128,7 @@ Target "NuGet" (fun _ ->
             ReleaseNotes = String.Join(Environment.NewLine, release.Notes)
             Tags = tags
             OutputPath = "bin"
+            WorkingDir = package
             AccessKey = getBuildParamOrDefault "nugetkey" ""
             Publish = hasBuildParam "nugetkey"
             Dependencies = [] })

@@ -3,7 +3,7 @@ open System.Reflection
 
 [<assembly: AssemblyTitleAttribute("Stanford.NLP.Parser.Fsharp")>]
 [<assembly: AssemblyProductAttribute("Stanford.NLP.Parser.Fsharp")>]
-[<assembly: AssemblyDescriptionAttribute("F# wrapper for Stanford.NLP.Parser")>]
+[<assembly: AssemblyDescriptionAttribute("F# extentions for Stanford.NLP.Parser")>]
 [<assembly: AssemblyVersionAttribute("0.0.7")>]
 [<assembly: AssemblyFileVersionAttribute("0.0.7")>]
 do ()

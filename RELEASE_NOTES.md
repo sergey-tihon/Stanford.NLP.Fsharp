@@ -21,5 +21,7 @@
 * Migrated to latest IKVM version 7.4.5196
 * Migrated to Stanford.NLP.Parser 3.3.1.1
 
-### 0.0.7 - Unreleased
-* Re-branding and new project name
+### 0.0.7 - May 20, 2014
+* Project renamed to `Stanford.NLP.Fsharp`
+* Documentatin and site were released
+* Build script from FSharp.ProjectScaffold was added
