@@ -25,3 +25,6 @@
 * Project renamed to `Stanford.NLP.Fsharp`
 * Documentatin and site were released
 * Build script from FSharp.ProjectScaffold was added
+
+#### 0.0.8 - June 21 2014
+* Migrated to Stanford.NLP.Parser 3.4.0.0
