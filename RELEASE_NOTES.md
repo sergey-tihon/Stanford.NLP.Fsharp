@@ -26,5 +26,9 @@
 * Documentatin and site were released
 * Build script from FSharp.ProjectScaffold was added
 
-#### 0.0.8 - June 21 2014
+### 0.0.8 - June 21 2014
 * Migrated to Stanford.NLP.Parser 3.4.0.0
+
+### 0.0.9 - December 3 2014
+* Migrated to latest IKVM version 8.0.5449
+* Migrated to Stanford.NLP.Parser 3.5.0.0

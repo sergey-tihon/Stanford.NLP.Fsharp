@@ -14,8 +14,7 @@
     <copyright>Copyright 2014</copyright>
     <tags>@tags@</tags>
     <dependencies>
-      <dependency id="IKVM" version="[7.4.5196]" />
-      <dependency id="Stanford.NLP.Parser" version="[3.4.0.0]" />
+      <dependency id="Stanford.NLP.Parser" version="[3.5.0.0]" />
     </dependencies>
   </metadata>
 </package>
