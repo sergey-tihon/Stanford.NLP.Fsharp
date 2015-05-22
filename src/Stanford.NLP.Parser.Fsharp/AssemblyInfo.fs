@@ -4,9 +4,9 @@ open System.Reflection
 [<assembly: AssemblyTitleAttribute("Stanford.NLP.Parser.Fsharp")>]
 [<assembly: AssemblyProductAttribute("Stanford.NLP.Parser.Fsharp")>]
 [<assembly: AssemblyDescriptionAttribute("F# extensions for Stanford.NLP.Parser")>]
-[<assembly: AssemblyVersionAttribute("0.0.10")>]
-[<assembly: AssemblyFileVersionAttribute("0.0.10")>]
+[<assembly: AssemblyVersionAttribute("0.0.11")>]
+[<assembly: AssemblyFileVersionAttribute("0.0.11")>]
 do ()
 
 module internal AssemblyVersionInformation =
-    let [<Literal>] Version = "0.0.10"
+    let [<Literal>] Version = "0.0.11"

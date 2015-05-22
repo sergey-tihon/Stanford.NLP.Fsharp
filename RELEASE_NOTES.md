@@ -36,3 +36,6 @@
 ### 0.0.10 - February 15, 2015
 * Migrated to latest IKVM version 8.0.5449.1
 * Migrated to Stanford.NLP.Parser 3.5.1.0
+
+### 0.0.11 - May 22, 2015
+* Migrated to Stanford.NLP.Parser 3.5.2.0
