@@ -11,10 +11,10 @@
     <summary>@summary@</summary>
     <description>@description@</description>
     <releaseNotes>@releaseNotes@</releaseNotes>
-    <copyright>Copyright 2015</copyright>
+    <copyright>Copyright 2017</copyright>
     <tags>@tags@</tags>
     <dependencies>
-      <dependency id="Stanford.NLP.Parser" version="[3.6.0]" />
+      <dependency id="Stanford.NLP.Parser" version="[3.7.0]" />
     </dependencies>
   </metadata>
 </package>

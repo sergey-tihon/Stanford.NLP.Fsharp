@@ -42,3 +42,6 @@
 
 ### 0.0.12 - December 28, 2015
 * Migrated to Stanford.NLP.Parser 3.6.0.0
+
+### 0.0.13 - Januaru 14, 2017
+* Migrated to Stanford.NLP.Parser 3.7.0.0
