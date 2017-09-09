@@ -14,7 +14,7 @@
     <copyright>Copyright 2017</copyright>
     <tags>@tags@</tags>
     <dependencies>
-      <dependency id="Stanford.NLP.Parser" version="[3.7.0]" />
+      <dependency id="Stanford.NLP.Parser" version="[3.8.0]" />
     </dependencies>
   </metadata>
 </package>

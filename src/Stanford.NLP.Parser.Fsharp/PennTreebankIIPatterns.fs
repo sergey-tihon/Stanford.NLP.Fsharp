@@ -3,21 +3,21 @@ module Stanford.NLP.FSharp.Parser.PennTreebankIIPatterns
 
 open edu.stanford.nlp.trees
 
-let isClauseLevel = function 
+let isClauseLevel = function
     | S | SBAR | SBARQ | SQ | SINV -> true
     | _ -> false
 
 let isPhraseLevel = function
-    | ADJP | ADVP | CONJP | FRAG | INTJ | LST 
-    | NAC | NP | NX | PP | PRN | PRT | QP | RRC 
+    | ADJP | ADVP | CONJP | FRAG | INTJ | LST
+    | NAC | NP | NX | PP | PRN | PRT | QP | RRC
     | UCP | VP | WHADJP | WHADVP | WHNP | WHPP | X -> true
     | _ -> false
 
 let isWordLevel = function
-    | CC | CD | DT | EX | FW | IN | JJ | JJR 
-    | JJS | LS | MD | NN | NNS | NNP | NNPS 
-    | PDT | POS | PRP | PRPS | RB | RBR | RBS 
-    | RP | SYM | TO | UH | VB | VBD | VBG 
+    | CC | CD | DT | EX | FW | IN | JJ | JJR
+    | JJS | LS | MD | NN | NNS | NNP | NNPS
+    | PDT | POS | PRP | PRPS | RB | RBR | RBS
+    | RP | SYM | TO | UH | VB | VBD | VBG
     | VBN | VBP | VBZ | WDT | WP | WPS | WRB -> true
     | _ -> false
 
@@ -29,7 +29,7 @@ let isPunctuation = function
 let private tagMatch predicate tag =
     match predicate tag with
     | true -> Some()
-    | false -> None 
+    | false -> None
 
 let (|ClauseLevel|_|) tag = tag |> tagMatch isClauseLevel
 let (|PhraseLevel|_|) tag = tag |> tagMatch isPhraseLevel
@@ -38,7 +38,7 @@ let (|Punctuation|_|) tag = tag |> tagMatch isPunctuation
 
 
 
-let getLabel (node:Tree) = 
+let getLabel (node:Tree) =
     match node.isLeaf(), node.label() with
     | true, _ -> None
     | _, null -> None
@@ -48,7 +48,7 @@ let getLabel (node:Tree) =
         | "ADJP" -> Some(ADJP)
         | "ADVP" -> Some(ADVP)
         | "CC"   -> Some(CC)
-        | "CD"   -> Some(CD) 
+        | "CD"   -> Some(CD)
         | "CONJP"-> Some(CONJP)
         | "DT"   -> Some(DT)
         | "EX"   -> Some(EX)
@@ -69,24 +69,24 @@ let getLabel (node:Tree) =
         | "NNPS" -> Some(NNPS)
         | "NP"   -> Some(NP)
         // to support Stanford '-retainTmpSubcategories' http://nlp.stanford.edu/software/parser-faq.shtml#s
-        | "NP-TMP" | "NP-ADV" -> Some(NP) 
+        | "NP-TMP" | "NP-ADV" -> Some(NP)
         | "NX"   -> Some(NX)
         | "PDT"  -> Some(PDT)
-        | "POS"  -> Some(POS) 
+        | "POS"  -> Some(POS)
         | "PP"   -> Some(PP)
         | "PRN"  -> Some(PRN)
         | "PRP"  -> Some(PRP)
         | "PRP$" | "PRP-S" -> Some(PRPS)
-        | "PRT"  -> Some(PRT) 
+        | "PRT"  -> Some(PRT)
         | "QP"   -> Some(QP)
         | "RB"   -> Some(RB)
         | "RBR"  -> Some(RBR)
         | "RBS"  -> Some(RBS)
-        | "RP"   -> Some(RP) 
+        | "RP"   -> Some(RP)
         | "RRC"  -> Some(RRC)
         | "S"    -> Some(S)
         | "SBAR" -> Some(SBAR)
-        | "SBARQ"-> Some(SBARQ) 
+        | "SBARQ"-> Some(SBARQ)
         | "SINV" -> Some(SINV)
         | "SQ"   -> Some(SQ)
         | "SYM"  -> Some(SYM)
@@ -95,14 +95,14 @@ let getLabel (node:Tree) =
         | "UH"   -> Some(UH)
         | "VB"   -> Some(VB)
         | "VBD"  -> Some(VBD)
-        | "VBG"  -> Some(VBG) 
-        | "VBN"  -> Some(VBN) 
-        | "VBP"  -> Some(VBP) 
-        | "VBZ"  -> Some(VBZ) 
+        | "VBG"  -> Some(VBG)
+        | "VBN"  -> Some(VBN)
+        | "VBP"  -> Some(VBP)
+        | "VBZ"  -> Some(VBZ)
         | "VP"   -> Some(VP)
         | "WDT"  -> Some(WDT)
         | "WHADJP"->Some(WHADJP)
-        | "WHADVP"->Some(WHADVP) 
+        | "WHADVP"->Some(WHADVP)
         | "WHNP" -> Some(WHNP)
         | "WHPP" -> Some(WHPP)
         | "WP"   -> Some(WP)
@@ -123,7 +123,7 @@ let getLabel (node:Tree) =
 
 let isOneOfLabels labels node =
     match getLabel node with
-    | Some(x) -> 
+    | Some(x) ->
         labels |> Seq.exists (fun label -> label = x)
     | _ -> false
 
