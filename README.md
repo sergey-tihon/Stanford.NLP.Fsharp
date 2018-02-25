@@ -6,7 +6,7 @@ F# wrappers for [The Stanford NLP Software](http://nlp.stanford.edu/software/ind
 How to use it
 =============
 
-- Install using the [NuGet package](https://nuget.org/packages/FSharp.NLP.Stanford.Parser).  
+- Install using the [NuGet package](https://www.nuget.org/packages/Stanford.NLP.Parser.Fsharp/).  
 - Download models from [The Stanford NLP Group site](http://nlp.stanford.edu/software/stanford-parser-full-2013-06-20.zip).
 - Extract models from ‘stanford-parser-3.2.0-models.jar‘ (just unzip it)
 - You are ready to start.
